@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Download, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const ProgrammeOverview = () => {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -20,15 +21,15 @@ const ProgrammeOverview = () => {
       {/* Navigation Tabs */}
       <div className="bg-cyan-500">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
             {/* Tabs */}
-            <div className="flex">
+            <div className="flex flex-wrap gap-2 overflow-x-auto">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-6 py-4 text-white font-medium transition-colors relative ${
-                    activeTab === tab ? " text-white" : "hover:bg-cyan-400"
+                  className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-white font-medium transition-colors relative text-sm sm:text-base ${
+                    activeTab === tab ? "text-white" : "hover:bg-cyan-400"
                   }`}
                 >
                   {tab}
@@ -40,16 +41,17 @@ const ProgrammeOverview = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-2">
-              <button className="bg-white  text-[#002060] px-3 py-3 rounded font-semibold hover:bg-gray-100 transition-colors">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <button className="bg-white text-[#002060] px-3 sm:px-4 py-2 sm:py-3 rounded font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base">
                 Apply Now
               </button>
-              <button className="border border-white text-white px-6 py-2 font-semibold hover:bg-white hover:text-cyan-500 transition-colors">
+              <button className="border border-white text-white px-3 sm:px-4 lg:px-6 py-2 font-semibold hover:bg-white hover:text-cyan-500 transition-colors text-sm lg:text-base">
                 Book Consultation
               </button>
-              <button className=" text-white px-2 py-2 rounded font-semibold hover:bg-cyan-700 transition-colors flex items-center">
-              <ArrowRight className="w-4 h-4 mr-4" />
-                Download Brochure
+              <button className="text-white px-2 sm:px-3 py-2 rounded font-semibold hover:bg-cyan-700 transition-colors flex items-center text-sm lg:text-base">
+                <ArrowRight className="w-4 h-4 mr-2" />
+                <span className="hidden sm:inline">Download Brochure</span>
+                <span className="sm:hidden">Download</span>
               </button>
             </div>
           </div>
@@ -57,61 +59,118 @@ const ProgrammeOverview = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Content */}
-          <div className="space-y-6">
-            {activeTab === "Overview" && (
-              <div className="space-y-6 mt-8">
-                <div className="bg-white p-10 py-12 rounded-lg shadow-sm border border-gray-200">
-                  <div className="relative">
-                    <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
-                      OVERVIEW
-                    </span>
-
-                    <h1 className="text-4xl lg:text-5xl font-bold leading-tight mt-5 py-2  text-[#002060]">
-                      Women Leading the Next Wave of Transformation
-                    </h1>
-
-                    {/* Description */}
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      Digital transformation is more than a buzzword—it's a
-                      global shift. In this three-day immersive programme,
-                      you'll gain the tools, confidence, and vision necessary to
-                      lead that shift. Delivered by experts in women's
-                      leadership and digital strategy, this experience will
-                      reshape how you think, influence, and lead in a
-                      fast-evolving world.
-                    </p>
-                  </div>
-                </div>
+          <div className="w-full flex-1 flex flex-col justify-center h-full">
+            <div className="relative bg-white p-4 sm:p-6 lg:px-12 lg:py-20 rounded-lg shadow-sm border border-gray-200 lg:translate-x-[130px] z-50">
+              <div className="space-y-6 flex-1 flex flex-col justify-center h-full">
+                {(() => {
+                  const tabContent = {
+                    Overview: (
+                      <>
+                        <span className=" text-red-500 font-bold text-lg tracking-wide uppercase">
+                          OVERVIEW
+                        </span>
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-[#002060]">
+                          Women Leading the Next Wave of Transformation
+                        </h1>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Digital transformation is more than a buzzword—it's a
+                          global shift. In this three-day immersive programme,
+                          you'll gain the tools, confidence, and vision
+                          necessary to lead that shift. Delivered by experts in
+                          women's leadership and digital strategy, this
+                          experience will reshape how you think, influence, and
+                          lead in a fast-evolving world.
+                        </p>
+                      </>
+                    ),
+                    Programme: (
+                      <>
+                        <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
+                          PROGRAMME
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002060] mb-4">
+                          Programme Details
+                        </h2>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Programme content goes here...
+                        </p>
+                      </>
+                    ),
+                    Features: (
+                      <>
+                        <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
+                          FEATURES
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002060] mb-4">
+                          Features
+                        </h2>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Features content goes here...
+                        </p>
+                      </>
+                    ),
+                    Faculty: (
+                      <>
+                        <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
+                          FACULTY
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002060] mb-4">
+                          Faculty
+                        </h2>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Faculty content goes here...
+                        </p>
+                      </>
+                    ),
+                    Certificate: (
+                      <>
+                        <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
+                          CERTIFICATE
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002060] mb-4">
+                          Certificate
+                        </h2>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Certificate content goes here...
+                        </p>
+                      </>
+                    ),
+                    Fees: (
+                      <>
+                        <span className="text-red-500 font-bold text-lg tracking-wide uppercase">
+                          FEES
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002060] mb-4">
+                          Fees
+                        </h2>
+                        <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                          Fees content goes here...
+                        </p>
+                      </>
+                    ),
+                  };
+                  return tabContent[activeTab];
+                })()}
               </div>
-            )}
+            </div>
           </div>
 
           {/* Right Image */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg overflow-hidden shadow-lg">
-              {/* Placeholder for VR/Technology Image */}
-              <div className="aspect-[4/5] bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <div className="w-24 h-24 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl">👩‍💻</span>
-                  </div>
-                  <p className="text-sm font-medium">
-                    Your VR Technology Image Here
-                  </p>
-                  <p className="text-xs mt-1">Replace with actual image</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute top-1/2 -left-8 w-2 h-20 bg-red-700 rounded-full transform -rotate-12"></div>
+          <div className="w-full relative">
+            <Image
+              src="/images/Overview.jpg"
+              alt="Women Leading Digital Transformation"
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover rounded-lg shadow-lg"
+              priority
+            />
+            <div className="hidden lg:block absolute top-[70%] sm:top-[270px] left-4 w-[100px] sm:w-[150px] h-[6px] bg-red-600 opacity-80 z-50"></div>
           </div>
         </div>
-
-       
       </div>
     </div>
   );
