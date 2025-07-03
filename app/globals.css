@@ -4,58 +4,58 @@
 
 /* Lato Font Faces */
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Italic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato/Lato-Black.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("/fonts/Lato/Lato-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 /* GT Sectra Font Faces */
 @font-face {
-  font-family: 'GT Sectra';
-  src: url('/fonts/GT Sectra/GT Sectra Book.ttf') format('truetype');
+  font-family: "GT Sectra";
+  src: url("/fonts/GT Sectra/GT Sectra Book.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GT Sectra';
-  src: url('/fonts/GT Sectra/GT Sectra Medium.ttf') format('truetype');
+  font-family: "GT Sectra";
+  src: url("/fonts/GT Sectra/GT Sectra Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GT Sectra';
-  src: url('/fonts/GT Sectra/GT Sectra Bold.ttf') format('truetype');
+  font-family: "GT Sectra";
+  src: url("/fonts/GT Sectra/GT Sectra Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GT Sectra';
-  src: url('/fonts/GT Sectra/GT Sectra Black.ttf') format('truetype');
+  font-family: "GT Sectra";
+  src: url("/fonts/GT Sectra/GT Sectra Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -65,21 +65,27 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .font-gt-sectra {
-  font-family: 'GT Sectra', 'Lato', Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-gt-sectra {
+  font-family: "GT Sectra", "Lato", Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -90,8 +96,41 @@ h1, h2, h3, h4, h5, h6, .font-gt-sectra {
 
 @layer components {
   .container {
-    width: 85%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* testimonial-card component */
+.qoute-text {
+  padding: 5vh 11vh 0vh 13vh;
+}
+
+.qoute-paragraph {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.blue-footer {
+  padding: 2vh 0vh;
+  transform: translateX(112px);
+  overflow: visible;
+}
+
+.red-line {
+  transform: translateX(20px) translateY(-65px);
+  z-index: 20;
+}
+
+

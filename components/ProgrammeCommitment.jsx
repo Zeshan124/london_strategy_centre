@@ -5,7 +5,7 @@ import Image from "next/image";
 const ProgrammeCommitment = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto p-4 sm:p-8 bg-white min-h-screen">
+      <div className="container mx-auto bg-white">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-2xl sm:text-4xl font-bold text-blue-900 mb-6 sm:mb-8">
@@ -23,7 +23,7 @@ const ProgrammeCommitment = () => {
                   height={50}
                 />
               </div>
-              <span className="text-base sm:text-xl font-semibold text-gray-800">
+              <span className="text-base sm:text-2xl font-semibold text-gray-800 px-2">
                 2nd - 4th September, 2025
               </span>
             </div>
@@ -37,7 +37,7 @@ const ProgrammeCommitment = () => {
                   height={50}
                 />
               </div>
-              <span className="text-base sm:text-xl font-semibold text-gray-800">
+              <span className="text-base sm:text-2xl font-semibold text-gray-800 px-2">
                 08:30 - 17:00 GST
               </span>
             </div>
@@ -47,15 +47,14 @@ const ProgrammeCommitment = () => {
         {/* Main Content */}
         <div className="relative">
           {/* Custom Map Image */}
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-sm flex justify-center">
-            <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto">
+          <div className="relative rounded-lg overflow-hidden flex justify-center py-5">
+          <div className="max-w-3xl sm:max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-full mx-auto">
               <Image
                 src="/images/Map.jpg"
                 alt="Custom Map"
                 width={800}
                 height={500}
-                className="rounded-lg shadow-lg w-full h-auto"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
+                className="rounded-lg shadow-lg"
                 priority
               />
             </div>

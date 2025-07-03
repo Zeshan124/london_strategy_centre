@@ -17,41 +17,40 @@ const ProgrammeOverview = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       {/* Navigation Tabs */}
       <div className="bg-cyan-500">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div className="container mx-auto px-3 sm:px-4 py-3">
+        <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-stretch lg:items-center">
             {/* Tabs */}
-            <div className="flex flex-wrap gap-2 overflow-x-auto">
+            <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2 pb-2 flex-1">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-white font-medium transition-colors relative text-sm sm:text-base ${
+                  className={`flex-shrink-0 px-3 sm:px-4 lg:px-6 py-2 sm:py-3 text-white font-medium transition-colors relative text-xs sm:text-sm lg:text-base whitespace-nowrap ${
                     activeTab === tab ? "text-white" : "hover:bg-cyan-400"
                   }`}
                 >
                   {tab}
                   {activeTab === tab && (
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-white"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 sm:h-1 bg-white"></div>
                   )}
                 </button>
               ))}
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <button className="bg-white text-[#002060] px-3 sm:px-4 py-2 sm:py-3 rounded font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 flex-shrink-0">
+              <button className="bg-white text-[#002060] px-4 py-2.5 sm:py-3 rounded font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base text-center">
                 Apply Now
               </button>
-              <button className="border border-white text-white px-3 sm:px-4 lg:px-6 py-2 font-semibold hover:bg-white hover:text-cyan-500 transition-colors text-sm lg:text-base">
+              <button className="border border-white text-white px-4 py-2.5 sm:py-3 rounded font-semibold hover:bg-white hover:text-cyan-500 transition-colors text-sm lg:text-base text-center">
                 Book Consultation
               </button>
-              <button className="text-white px-2 sm:px-3 py-2 rounded font-semibold hover:bg-cyan-700 transition-colors flex items-center text-sm lg:text-base">
-                <ArrowRight className="w-4 h-4 mr-2" />
-                <span className="hidden sm:inline">Download Brochure</span>
-                <span className="sm:hidden">Download</span>
+              <button className="text-white px-4 py-2.5 sm:py-3 rounded font-semibold hover:bg-cyan-700 transition-colors flex items-center justify-center text-sm lg:text-base">
+                <ArrowRight className="w-4 h-4 mr-2 flex-shrink-0" />
+                <span>Download Brochure</span>
               </button>
             </div>
           </div>
@@ -63,7 +62,7 @@ const ProgrammeOverview = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Content */}
           <div className="w-full flex-1 flex flex-col justify-center h-full">
-            <div className="relative bg-white p-4 sm:p-6 lg:px-12 lg:py-20 rounded-lg shadow-sm border border-gray-200 lg:translate-x-[130px] z-50">
+            <div className="relative bg-white p-4 sm:p-6 lg:px-12 lg:py-20 rounded-lg shadow-sm border border-gray-200 lg:w-[120%] z-50">
               <div className="space-y-6 flex-1 flex flex-col justify-center h-full">
                 {(() => {
                   const tabContent = {
@@ -159,11 +158,11 @@ const ProgrammeOverview = () => {
           </div>
 
           {/* Right Image */}
-          <div className="w-full relative">
+          <div className="lg:w-[90%] relative">
             <Image
               src="/images/Overview.jpg"
               alt="Women Leading Digital Transformation"
-              width={800}
+              width={700}
               height={600}
               className="w-full h-auto object-cover rounded-lg shadow-lg"
               priority

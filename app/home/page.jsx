@@ -4,7 +4,7 @@ import Header from "@/components/header";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       <Header />
       <section className="relative bg-[#002060] text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -33,10 +33,9 @@ const HomePage = () => {
 
             {/* Right Column (6 columns) */}
             <div className="lg:col-span-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-8 border border-white border-opacity-20">
-              
               <div className="text-center mb-6">
                 <div className="w-40 h-16 bg-white flex items-center justify-center mx-auto mb-4">
-                  <Image src="/images/LSC-logo.png" width={120} height={70}/>
+                  <Image src="/images/LSC-logo.png" width={120} height={70} />
                 </div>
                 <h3 className="text-2xl font-bold border-2 border-white p-4 rounded-lg">
                   LONDON STRATEGY CENTRE
