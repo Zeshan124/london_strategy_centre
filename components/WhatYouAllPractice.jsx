@@ -118,7 +118,7 @@ const WhatYouAllPractice = () => {
           </div>
 
           {/* Image Content */}
-          <div className="relative h-full min-h-[400px] py-14">
+          <div className="relative h-full min-h-[200px] lg:min-h-[400px] py-5 lg:py-14">
             <div className="absolute transition-opacity duration-500">
               <Image
                 src={tabContent[activeTab].image}
