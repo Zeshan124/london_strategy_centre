@@ -96,7 +96,7 @@ h6,
 
 @layer components {
   .container {
-    width: 90%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -112,6 +112,45 @@ h6,
   scrollbar-width: none; /* Firefox */
 }
 
+/* Home component */
+.main-heading {
+  line-height: 1.3;
+  font-size: 72px;
+}
+
+/* globals.css */
+.logo-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+.logo-wrapper::before,
+.logo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40px;          /* fade width */
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, white, transparent);
+}
+.logo-wrapper::after {
+  right: 0;
+  left: auto;
+  transform: scaleX(-1); /* mirror for right side */
+}
+
+
+
+.video-text-content {
+  padding: 10vh 0vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.uni-logo {
+  padding: 2vh 0vh 2vh 0vh;
+}
 /* testimonial-card component */
 .qoute-text {
   padding: 5vh 11vh 0vh 13vh;
@@ -133,4 +172,76 @@ h6,
   z-index: 20;
 }
 
+/* Home Component media query */
+/* =======  Large laptops & small desktops (max‑width: 1199 px)  ======= */
+@media (max-width: 1280px) {
+  /* ≈ LG */
+  .main-heading {
+    font-size: 60px;
+  }
 
+  .video-text-content {
+    padding: 8vh 0;
+  }
+
+  .uni-logo {
+    padding: 2vh 0;
+  } /* same rakhna hai to skip bhi kar sakte ho */
+}
+
+/* =======  Tablets (max‑width: 991 px)  ======= */
+@media (max-width: 991px) {
+  /* ≈ MD */
+  .main-heading {
+    font-size: 54px;
+  }
+
+  .video-text-content {
+    padding: 7vh 0;
+  }
+
+  .uni-logo {
+    padding: 1.8vh 0;
+  }
+}
+
+/* =======  Landscape mobiles & small tablets (max‑width: 767 px)  ======= */
+@media (max-width: 767px) {
+  /* ≈ SM */
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .video-text-content {
+    padding: 6vh 0;
+  }
+
+  .uni-logo {
+    padding: 1.5vh 0;
+  }
+}
+
+/* =======  Portrait mobiles (max‑width: 575 px)  ======= */
+@media (max-width: 575px) {
+  /* ≈ XS */
+  .main-heading {
+    font-size: 45px;
+    padding: 3vh 0vh 0vh 0vh;
+  }
+
+  .video-text-content {
+    padding: 4vh 0;
+  }
+
+  .uni-logo {
+    padding: 1vh 0;
+  }
+}
+
+/* =======  Very small devices (max‑width: 375 px)  ======= */
+@media (max-width: 375px) {
+  .main-heading {
+    font-size: 45px;
+    padding: 3vh 0vh 0vh 0vh;
+  }
+}

@@ -15,25 +15,31 @@ const Header = () => {
           <div className="flex justify-center sm:justify-start">
             {/* Mobile: Show only one link, Desktop: Show all */}
             <div className="flex space-x-3 sm:space-x-4 md:space-x-6">
-              <a 
-                href="#" 
+              {/* 1. Upcoming Events / Events */}
+              <a
+                href="#"
                 className="hover:underline transition-colors duration-200"
               >
                 <span className="hidden sm:inline">Upcoming Events</span>
-                <span className="sm:hidden">Events</span>
+                <span className="sm:inline lg:hidden">Upcoming Events</span>
               </a>
-              <a 
-                href="#" 
-                className="hover:underline transition-colors duration-200 hidden xs:inline-block"
+
+              {/* 2. Latest Research / Research  – ab visible */}
+              <a
+                href="#"
+                className="hover:underline transition-colors duration-200"
               >
                 <span className="hidden sm:inline">Latest Research</span>
-                <span className="sm:hidden">Research</span>
+                <span className="sm:inline lg:hidden">Latest Research</span>
               </a>
-              <a 
-                href="#" 
-                className="hover:underline transition-colors duration-200 hidden sm:inline-block"
+
+              {/* 3. Jobs at LSC / Jobs  – optional abbreviation */}
+              <a
+                href="#"
+                className="hover:underline transition-colors duration-200"
               >
-                Jobs at LSC
+                <span className="hidden sm:inline">Jobs at LSC</span>
+                <span className="sm:inline lg:hidden">Jobs at LSC</span>
               </a>
             </div>
           </div>
@@ -44,7 +50,6 @@ const Header = () => {
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-3 sm:px-4 lg:px-6">
           <div className="flex items-center justify-between py-2 sm:py-3 lg:py-4">
-            
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Image
@@ -73,7 +78,7 @@ const Header = () => {
               </a>
               <div className="relative group">
                 <button className="flex items-center text-gray-800 hover:text-cyan-600 font-medium text-sm 2xl:text-base transition-colors duration-200 whitespace-nowrap">
-                  Programmes 
+                  Programmes
                   <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
                 {/* Dropdown menu can be added here */}
@@ -120,7 +125,7 @@ const Header = () => {
               </a>
               <div className="relative group">
                 <button className="flex items-center text-gray-800 hover:text-cyan-600 font-medium text-sm transition-colors duration-200">
-                  Programmes 
+                  Programmes
                   <ChevronDown className="ml-1 h-3 w-3" />
                 </button>
               </div>
@@ -128,7 +133,7 @@ const Header = () => {
                 href="#"
                 className="text-gray-800 hover:text-cyan-600 font-medium text-sm transition-colors duration-200"
               >
-                 Customised Solutions
+                Customised Solutions
               </a>
               <a
                 href="#"
@@ -140,13 +145,13 @@ const Header = () => {
                 href="#"
                 className="text-gray-800 hover:text-cyan-600 font-medium text-sm transition-colors duration-200"
               >
-                  Careers
+                Careers
               </a>
               <a
                 href="#"
                 className="text-gray-800 hover:text-cyan-600 font-medium text-sm transition-colors duration-200"
               >
-                  Certificate
+                Certificate
               </a>
             </nav>
 
@@ -167,11 +172,13 @@ const Header = () => {
         </div>
 
         {/* Mobile Dropdown Menu */}
-        <div className={`lg:hidden bg-white border-t shadow-lg transition-all duration-300 ease-in-out ${
-          mobileMenuOpen 
-            ? 'max-h-screen opacity-100 visible' 
-            : 'max-h-0 opacity-0 invisible overflow-hidden'
-        }`}>
+        <div
+          className={`lg:hidden bg-white border-t shadow-lg transition-all duration-300 ease-in-out ${
+            mobileMenuOpen
+              ? "max-h-screen opacity-100 visible"
+              : "max-h-0 opacity-0 invisible overflow-hidden"
+          }`}
+        >
           <nav className="flex flex-col px-4 py-3 sm:px-6 sm:py-4 space-y-1">
             <a
               href="#"
@@ -187,9 +194,7 @@ const Header = () => {
             >
               About
             </a>
-            <button 
-              className="flex items-center justify-between text-gray-800 hover:text-cyan-600 hover:bg-gray-50 font-medium py-3 px-2 rounded-md transition-all duration-200 text-sm sm:text-base"
-            >
+            <button className="flex items-center justify-between text-gray-800 hover:text-cyan-600 hover:bg-gray-50 font-medium py-3 px-2 rounded-md transition-all duration-200 text-sm sm:text-base">
               <span>Programmes</span>
               <ChevronDown className="h-4 w-4" />
             </button>

@@ -36,7 +36,7 @@ const Restaurants = () => {
           {tabContent.map((tab, index) => (
             <button
               key={index}
-              className={`text-xs sm:text-sm md:text-base lg:text-lg font-semibold uppercase py-4 px-2 transition-colors duration-300 ${
+              className={`text-xs sm:text-sm md:text-base lg:text-2xl font-semibold uppercase py-4 px-2 lg:px-[120px] transition-colors duration-300 ${
                 activeTab === index
                   ? "text-red-600 border-b-2 border-red-600"
                   : "text-gray-700 hover:text-red-600"
