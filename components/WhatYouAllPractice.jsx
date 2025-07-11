@@ -61,7 +61,7 @@ const WhatYouAllPractice = () => {
           </div>
 
           {/* Blue Box */}
-          <div className="relative flex-1 flex items-end top-2">
+          <div className="relative flex-1 flex items-end top-2 lg:top-10">
             <div
               className="bg-[#002060] p-4 sm:p-6 lg:p-8 w-full 
                          xl:w-[130%] xl:absolute xl:left-0 xl:bottom-0
