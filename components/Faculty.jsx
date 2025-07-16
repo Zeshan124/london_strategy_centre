@@ -118,7 +118,7 @@ const FacultySection = () => {
               Meet the Women Leading the Way
             </h2>
           </div>
-          <p className="text-base sm:text-lg lg:text-2xl text-gray-700 max-w-4xl mx-auto text-center lg:text-left font-bold">
+          <p className="text-base faculty-para text-gray-700 max-w-4xl mx-auto text-center lg:text-left font-bold">
             Access exclusive guest speakers! Interact with proven leaders! &
             Experience real stories of impact and transformation!
           </p>

@@ -10,7 +10,7 @@ const tabContent = [
   {
     title:
       "EXPERIENCE THE ELEGANCE AND ENERGY OF DUBAI’S MOST INSPIRING SETTINGS",
-    images: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    images: ["/images/3.jpg", "/images/2.jpg", "/images/1.jpg"],
   },
 ];
 

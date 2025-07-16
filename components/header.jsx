@@ -57,7 +57,7 @@ const Header = () => {
                 alt="LSC Logo"
                 width={100}
                 height={75}
-                className="w-20 h-15 xs:w-24 xs:h-18 sm:w-28 sm:h-21 md:w-32 md:h-24 lg:w-36 lg:h-27 xl:w-40 xl:h-30 object-contain"
+                className="w-24 h-15 xs:w-24 xs:h-18 sm:w-28 sm:h-21 md:w-32 md:h-24 lg:w-36 lg:h-27 xl:w-40 xl:h-30 object-contain"
                 priority
               />
             </div>
