@@ -53,7 +53,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
               <Image
-                src="/images/LSC-Logo.png"
+                src="/images/lsc_logo.png"
                 alt="LSC Logo"
                 width={100}
                 height={75}
