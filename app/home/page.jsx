@@ -59,7 +59,7 @@ const HomePage = () => {
     }}
   >
     <Image
-      src="/images/LSC-logo.png"
+      src="/images/lsc_logo.png"
       width={120}
       height={70}
       alt="LSC Logo"

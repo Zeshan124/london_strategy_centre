@@ -25,7 +25,7 @@ const FacultySection = () => {
       title: "Assoc Fellow at",
       affiliation: "London Strategy Centre",
       affiliationColor: "text-red-500",
-      image: "/images/Faculty/Saskia-hart.jpg",
+      image: "/images/Faculty/Saskia-Hart.jpg",
       bio: "Saskia is an expert in organizational change and digital strategy implementation.",
     },
     {
@@ -35,7 +35,7 @@ const FacultySection = () => {
       title: "Assoc Fellow at",
       affiliation: "London Strategy Centre",
       affiliationColor: "text-red-500",
-      image: "/images/Faculty/maya-el-tal.jpg",
+      image: "/images/Faculty/Maya-El-Tal.jpg",
       bio: "Maya specializes in leadership development and transformation management.",
     },
     {
@@ -45,7 +45,7 @@ const FacultySection = () => {
       title: "Assoc Fellow at",
       affiliation: "London Strategy Centre",
       affiliationColor: "text-red-500",
-      image: "/images/Faculty/rubby-dixcon.jpg",
+      image: "/images/Faculty/Rubby-Dixcon.jpg",
       bio: "Rubby is a renowned expert in digital leadership and organizational psychology.",
     },
     // {
