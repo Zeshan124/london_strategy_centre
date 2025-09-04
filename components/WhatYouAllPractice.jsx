@@ -83,9 +83,7 @@ const WhatYouAllPractice = () => {
                     className="w-4 h-4"
                   />
                 </div>
-                <p className="text-white text-sm leading-relaxed">
-                  {item}
-                </p>
+                <p className="text-white text-sm leading-relaxed">{item}</p>
               </div>
             ))}
           </div>

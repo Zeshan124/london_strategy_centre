@@ -22,9 +22,13 @@ const HomePage = () => {
                 />
               </div>
 
-              <h1 className="font-bold mb-6 leading-tight main-heading">
+              <h1
+                className="main-heading font-bold mb-6 leading-tight 
+             text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-6xl"
+              >
                 Women's Leadership in the Digital Era
               </h1>
+
               <p className="text-xl mb-8 leading-relaxed ">
                 Leading with Confidence. Speaking with Power. Succeeding with
                 Purpose.
@@ -32,10 +36,10 @@ const HomePage = () => {
             </div>
 
             {/* Right Column (6 columns) */}
-            <div className="lg:col-span-6 relative overflow-hidden min-h-[550px] h-auto">
+            <div className="lg:col-span-6 relative overflow-hidden min-h-[250px] md:min-h-[550px] h-auto">
               {/* Video Background */}
               <video
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
                 autoPlay
                 loop
                 muted
@@ -45,45 +49,6 @@ const HomePage = () => {
                 <source src="/images/video/WDL.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
-
-              {/* Content Container */}
-          {/* Centering Wrapper for Logo */}
-<div className="flex justify-center lg:py-8 py-5">
-  <div
-    className="relative w-60 h-16 flex items-center justify-center mb-6 shadow-lg bg-white overflow-hidden"
-    style={{
-      WebkitMaskImage:
-        "linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%)",
-      maskImage:
-        "linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%)",
-    }}
-  >
-    <Image
-      src="/images/lsc_logo.png"
-      width={120}
-      height={70}
-      alt="LSC Logo"
-    />
-  </div>
-</div>
-
-
-
-              {/* Text block */}
-              {/* <div className="flex flex-col items-center text-center space-y-4 video-text-content">
-                  <h3 className="text-2xl md:text-5xl font-bold border-2 border-white px-6 py-3 text-white shadow-lg">
-                    LONDON STRATEGY CENTRE
-                  </h3>
-
-                  <p className="text-lg md:text-xl text-white font-medium">
-                    Shaping the future of entrepreneurship in the
-                    Kingdom&nbsp;of&nbsp;Saudi&nbsp;Arabia.
-                  </p>
-
-                  <p className="text-sm md:text-base text-white opacity-90">
-                    www.londonstrategycentre.com
-                  </p>
-                </div> */}
             </div>
           </div>
         </div>

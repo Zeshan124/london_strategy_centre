@@ -5,14 +5,22 @@ import React, { useState } from "react";
 const tabContent = [
   {
     title: "ENJOY CURATED GALA DINNER AT DUBAI’S TOP WOMEN-OWNED RESTAURANTS",
-    images: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    images: [
+      "/images/gala-dinner-at-Dubai/1.png",
+      "/images/gala-dinner-at-Dubai/2.png",
+      "/images/gala-dinner-at-Dubai/3.png",
+    ],
   },
   {
-    title:
-      "EXPERIENCE THE ELEGANCE AND ENERGY OF DUBAI’S MOST INSPIRING SETTINGS",
-    images: ["/images/3.jpg", "/images/2.jpg", "/images/1.jpg"],
+    title: "EXPERIENCE THE ELEGANCE AND ENERGY OF DUBAI’S MOST INSPIRING SETTINGS",
+    images: [
+      "/images/Experience-the-elegance/1.jpg",
+      "/images/Experience-the-elegance/2.jpg",
+      "/images/Experience-the-elegance/3.jpg",
+    ],
   },
 ];
+
 
 const Restaurants = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -58,7 +66,7 @@ const Restaurants = () => {
               key={index}
               src={img}
               alt={`Tab ${activeTab + 1} - Image ${index + 1}`}
-              className="w-full h-auto object-cover rounded shadow"
+              className="w-full h-full object-cover rounded shadow"
             />
           ))}
         </div>

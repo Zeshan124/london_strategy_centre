@@ -16,15 +16,15 @@ const TestimonialCard = () => {
       image: "/images/Professor-Yusra-Mouzughi.jpg",
       backgroundImage: "/images/Quote-BG-Image.jpg",
     },
-    {
-      id: 2,
-      quote:
-        "Leadership in technology isn't just about understanding code or systems—it's about understanding people, fostering innovation, and creating environments where diverse perspectives can thrive and contribute to groundbreaking solutions.",
-      name: "Dr. Sarah Mitchell",
-      title: "Chief Technology Officer, TechCorp",
-      image: "/images/Professor-Yusra-Mouzughi.jpg",
-      backgroundImage: "/images/Quote-BG-Image.jpg",
-    },
+    // {
+    //   id: 2,
+    //   quote:
+    //     "Leadership in technology isn't just about understanding code or systems—it's about understanding people, fostering innovation, and creating environments where diverse perspectives can thrive and contribute to groundbreaking solutions.",
+    //   name: "Dr. Sarah Mitchell",
+    //   title: "Chief Technology Officer, TechCorp",
+    //   image: "/images/Professor-Yusra-Mouzughi.jpg",
+    //   backgroundImage: "/images/Quote-BG-Image.jpg",
+    // },
   ];
 
   /* ───────────── STATE & HANDLERS ───────────── */
